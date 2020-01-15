@@ -30,10 +30,9 @@ class TextExtraction {
         let parts = [];
         let textLeft = parsedText.children;
         let indexOfMatchedString = 0;
-        const regexp = new RegExp(pattern.pattern);
 
         while (textLeft) {
-          let matches = regexp.exec(textLeft);
+          let matches = new RegExp(pattern.pattern).exec(textLeft);
 
           if (!matches) {
             break;
